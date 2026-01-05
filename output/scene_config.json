@@ -1,0 +1,24 @@
+{
+  "pattern": "concept",
+  "key_concepts": [
+    "I'll",
+    "What"
+  ],
+  "scenes": [
+    {
+      "type": "intro",
+      "duration": 3,
+      "visual": "fade_in"
+    },
+    {
+      "type": "explanation",
+      "duration": 5,
+      "visual": "bullet_points"
+    },
+    {
+      "type": "conclusion",
+      "duration": 2,
+      "visual": "fade_out"
+    }
+  ]
+}

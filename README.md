@@ -1,18 +1,18 @@
-# 🎬 AI Video Generator Pro
+# 🎬 AI Video Generator
 
-**Visual Learning Pattern Analysis + AI Video Synthesis System**
+**AI-Powered Video Generation with Groq**
 
-An advanced AI-powered video generation system that automatically analyzes content, detects optimal visual learning patterns, and creates educational videos with quality assessment.
+An AI-powered video generation system that automatically creates educational videos using Groq's lightning-fast AI models.
 
 ## 🌟 Features
 
 ### Core Capabilities
-- ✨ **AI Script Generation** - Generates detailed video scripts from topics using Hugging Face models
-- 🎨 **Visual Pattern Analysis** - Automatically detects optimal visual learning patterns (comparison, process, hierarchy, timeline, etc.)
-- 📐 **Smart Blueprint Generation** - Creates optimized animation blueprints based on detected patterns
-- 🎥 **Video Synthesis** - Renders professional videos using Manim animation engine
-- 📊 **Quality Assessment** - Comprehensive quality metrics and recommendations
-- 📥 **Export & Download** - Complete project export with all assets
+- ✨ **AI Script Generation** - Generates detailed video scripts using Groq Llama 3.3 70B
+- 🎨 **Visual Pattern Analysis** - Automatically detects optimal visual learning patterns
+- 📐 **Smart Blueprint Generation** - Creates optimized animation blueprints
+- 🎥 **Video Generation** - Creates MP4 videos with MoviePy
+- 📊 **Quality Assessment** - Comprehensive quality metrics
+- 📥 **Export & Download** - Download script, blueprint, and video
 
 ### Visual Learning Patterns
 The system intelligently detects and optimizes for:
@@ -66,14 +66,13 @@ AI-Video-Generator/
 
 ### Prerequisites
 - Python 3.10 or higher
-- FFmpeg (for video rendering)
-- Hugging Face account (free)
+- Groq API key (100% FREE - no credit card required)
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/yuvakavi/ATG-Task-2-.git
    cd AI-Video-Generator
    ```
 
@@ -90,11 +89,13 @@ AI-Video-Generator/
    pip install -r requirements.txt
    ```
 
-4. **Set up API keys**
-   - Get free Hugging Face token: https://huggingface.co/settings/tokens
-   - Copy `.env` file and add your token:
+4. **Set up Groq API key**
+   - Get FREE Groq API key: https://console.groq.com
+   - Sign up (no credit card needed)
+   - Create an API key
+   - Add to `.env` file:
      ```
-     HUGGINGFACE_API_KEY=your_token_here
+     GROQ_API_KEY=your_key_here
      ```
 
 5. **Run the application**
@@ -104,40 +105,19 @@ AI-Video-Generator/
 
 ## 💡 Usage
 
-### Demo Mode (Recommended for Testing)
-1. Open the app and **enable Demo Mode** in the sidebar
-2. Enter any topic (e.g., "How WebSockets work")
-3. Click "Generate Video"
-4. Explore the analysis, blueprint, and quality assessment
-5. Download your project files
+1. Open the app at http://localhost:8501
+2. Enter any topic (e.g., "How Machine Learning Works")
+3. Click "🎬 Generate Video"
+4. Wait for AI to generate script and create video
+5. Watch the video and download files
 
-### API Mode (Production)
-1. Disable Demo Mode in the sidebar
-2. Ensure your Hugging Face API key is configured
-3. Enter a topic and generate
-4. Wait for AI processing (first call may take 20-30 seconds)
-5. Review and download the complete video project
+## 📊 Features
 
-## 📊 Dashboard Features
-
-### Generation Tab
-- Script generation with AI
-- Real-time visual pattern analysis
-- Scene structure recommendations
-- Quality assessment with metrics
-- Export and download options
-
-### Analytics Tab
-- Generation history tracking
-- Quality score statistics
-- Pattern usage analytics
-- Recent generations overview
-
-### Help Tab
-- Comprehensive documentation
-- Visual pattern explanations
-- Quality metrics guide
-- Troubleshooting tips
+- **Script Generation** - AI writes detailed video scripts
+- **Pattern Analysis** - Detects best visual learning approach
+- **Video Creation** - Generates MP4 videos automatically
+- **Quality Assessment** - Rates video quality
+- **Downloads** - Get script, blueprint, and video files
 
 ## 🎯 Visual Pattern Detection
 
@@ -174,73 +154,48 @@ Recommendations:
 
 ### Environment Variables (.env)
 ```bash
-# Hugging Face API (Free)
-HUGGINGFACE_API_KEY=your_token_here
-
-# Optional: OpenAI API (Paid, better quality)
-OPENAI_API_KEY=your_key_here
+# Groq API (100% FREE)
+GROQ_API_KEY=your_key_here
 ```
 
-### Customization
-- Modify visual patterns in `backend/visual_pattern_analyzer.py`
-- Adjust quality thresholds in `backend/quality_assessor.py`
-- Customize Manim scenes in `video_engine/manim_scenes.py`
-- Edit AI prompts in `prompts/` directory
+### Why Groq?
+- ✅ **100% FREE** - No credit card required
+- ⚡ **World's Fastest** - Fastest LLM inference
+- 🎯 **Latest Models** - Llama 3.3 70B
+- 🔒 **Reliable** - Enterprise-grade infrastructure
 
 ## 📦 Export Options
 
-- **📦 Complete Project ZIP** - Includes script, blueprint, analysis, and quality report
-- **📝 Script TXT** - Generated video script
-- **📐 Blueprint TXT** - Animation blueprint
-- **📊 Quality Report** - Detailed assessment
+- **📝 Script** - Generated video script
+- **📐 Blueprint** - Animation blueprint  
+- **🎥 Video** - MP4 video file
 
 ## 🐛 Troubleshooting
 
 ### API Errors
-- **401 Unauthorized**: Check your API key in `.env`
-- **410 Gone / 404**: Model unavailable, use Demo Mode
-- **429 Rate Limit**: Wait a few moments or use Demo Mode
-- **503 Loading**: Model is loading, wait 20-30 seconds
+- **API Key Error**: Check your Groq API key in `.env` file
+- **Rate Limit**: Groq has generous free tier limits
+- **Connection Error**: Check your internet connection
 
-### Video Rendering Issues
-- Ensure FFmpeg is installed and in PATH
-- Check Manim installation: `manim --version`
-- Verify `output/` directory exists and is writable
-
-### Performance
-- First API call may take 20-30 seconds (model loading)
-- Subsequent calls are faster (model cached)
-- Demo Mode is instant (no API calls)
-
-## 🤝 Contributing
-
-Contributions are welcome! Areas for improvement:
-- Additional visual pattern types
-- More Manim scene templates
-- Enhanced quality metrics
-- UI/UX improvements
-- Documentation and examples
-
-## 📄 License
-
-This project is licensed under the MIT License.
+### Video Generation
+- Videos are generated as MP4 files in the `output/` folder
+- First generation may take a few seconds
+- Videos show topic title with clean design
 
 ## 🙏 Acknowledgments
 
-- **Hugging Face** - Free AI model inference
-- **Manim** - Mathematical animation engine
+- **Groq** - Lightning-fast AI inference (FREE)
+- **MoviePy** - Video generation library
 - **Streamlit** - Web app framework
-- **OpenAI** - GPT models (optional)
 
 ## 📞 Support
 
-For issues, questions, or suggestions:
-- Open an issue on GitHub
-- Check the Help tab in the app
-- Enable Demo Mode for testing without API
+For issues or questions:
+- Open an issue on GitHub: https://github.com/yuvakavi/ATG-Task-2-
+- Get Groq API key: https://console.groq.com
 
 ---
 
-**Built with ❤️ for educators and content creators**
+**Built with ❤️ using Groq AI**
 
-*Transform any topic into engaging educational videos with AI-powered visual learning analysis*
+*Transform any topic into educational videos with lightning-fast AI*
