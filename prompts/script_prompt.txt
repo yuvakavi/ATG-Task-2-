@@ -1,0 +1,13 @@
+Convert the following explainer script into an animation blueprint.
+
+Rules:
+- Output JSON only
+- Each scene must contain:
+  - scene_number
+  - duration (seconds)
+  - visual_elements
+  - animation_type
+  - on_screen_text
+
+Script:
+{script}
