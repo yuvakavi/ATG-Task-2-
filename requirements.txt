@@ -1,7 +1,19 @@
-openai
-streamlit
-manim
-numpy
-pillow
-requests
-python-dotenv
+# Core Dependencies
+streamlit==1.52.2
+python-dotenv==1.2.1
+requests==2.32.5
+
+# Video Generation
+moviepy==2.2.1
+imageio==2.37.2
+imageio-ffmpeg==0.6.0
+pillow==11.3.0
+numpy==2.2.6
+
+# AI/ML (Optional - for Manim rendering)
+manim==0.19.1
+
+# Additional Dependencies
+decorator==5.2.1
+proglog==0.1.12
+tqdm==4.67.1
